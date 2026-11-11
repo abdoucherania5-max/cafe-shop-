@@ -1,0 +1,1873 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumière Café — Boutique Coffee Sanctuary for Slow Mornings</title>
+    <meta
+      name="description"
+      content="Lumière Café is an elegant, calm, women-focused boutique coffee sanctuary. Savor slow-poured floral roasts, flaky house-baked viennoiserie, cozy reading nooks, and unhurried conversation."
+    />
+    <meta property="og:title" content="Lumière Café — Slow Mornings, Beautifully Brewed" />
+    <meta
+      property="og:description"
+      content="A quiet luxury boutique coffee shop designed for women to pause, savor, and gather. Reserve your reading nook today."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Cormorant Garamond (Headings) & Jost (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ivory: '#FFF7F5',
+              blush: '#F8DDE3',
+              gold: '#B08D57',
+              plum: '#4A2C3B',
+              mauve: '#7A5568',
+              rose: {
+                DEFAULT: '#E8A0B4',
+                hover: '#DB8AA2',
+              },
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              sans: ['"Jost"', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              plum: '0 12px 36px -8px rgba(74, 44, 59, 0.08), 0 4px 16px -2px rgba(74, 44, 59, 0.03)',
+              'plum-lg': '0 24px 50px -12px rgba(74, 44, 59, 0.12), 0 8px 24px -4px rgba(74, 44, 59, 0.05)',
+              modal: '0 25px 60px -15px rgba(74, 44, 59, 0.22)',
+            },
+            borderRadius: {
+              xl: '16px',
+              '2xl': '20px',
+              '3xl': '24px',
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      :root {
+        --color-ivory: #FFF7F5;
+        --color-blush: #F8DDE3;
+        --color-gold: #B08D57;
+        --color-plum: #4A2C3B;
+        --color-mauve: #7A5568;
+        --color-rose: #E8A0B4;
+        --color-rose-hover: #DB8AA2;
+      }
+
+      body {
+        background-color: #FFF7F5;
+        color: #4A2C3B;
+        font-family: 'Jost', sans-serif;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, .font-serif {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+      }
+
+      /* Subtle line-height and text balances */
+      .headline-balanced {
+        text-wrap: balance;
+      }
+
+      /* Gentle Scroll Reveal */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal-on-scroll {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+        * {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* Custom scrollbar matching palette */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #FFF7F5;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #F8DDE3;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #E8A0B4;
+      }
+
+      /* Focus styling with accessible gold ring */
+      a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+        outline: 2px solid #B08D57;
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body class="bg-ivory text-plum selection:bg-blush selection:text-plum">
+    <!-- SVG Fallback Generator Script -->
+    <script>
+      function getFallbackSvg(title) {
+        const cleanTitle = (title || 'Lumière Sanctuary').replace(/&/g, '&amp;');
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+          <defs>
+            <linearGradient id="softGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#F8DDE3" />
+              <stop offset="45%" stop-color="#FFF0F3" />
+              <stop offset="100%" stop-color="#FFF7F5" />
+            </linearGradient>
+            <radialGradient id="sunGlow" cx="50%" cy="38%" r="48%">
+              <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#FFF7F5" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#softGrad)" />
+          <circle cx="400" cy="260" r="170" fill="url(#sunGlow)"/>
+          <path d="M 260 520 L 260 270 A 140 140 0 0 1 540 270 L 540 520" fill="none" stroke="#F8DDE3" stroke-width="1.8" stroke-dasharray="5,5" opacity="0.8"/>
+          <g transform="translate(362, 195)" stroke="#B08D57" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 28 C 12 56, 64 56, 64 28 L 64 10 L 12 10 Z" fill="rgba(248, 221, 227, 0.45)" />
+            <path d="M64 16 C 74 16, 80 22, 80 30 C 80 38, 72 42, 64 42" />
+            <path d="M4 60 L 72 60" stroke-width="2.8" />
+            <path d="M26 0 C 26 -6, 30 -10, 26 -16" stroke-width="1.8" opacity="0.75"/>
+            <path d="M38 0 C 38 -8, 42 -12, 38 -18" stroke-width="1.8" opacity="0.9"/>
+            <path d="M50 0 C 50 -6, 54 -10, 50 -16" stroke-width="1.8" opacity="0.75"/>
+          </g>
+          <text x="400" y="375" font-family="'Cormorant Garamond', Georgia, serif" font-size="26" font-style="italic" font-weight="500" fill="#4A2C3B" text-anchor="middle" letter-spacing="1">${cleanTitle}</text>
+          <text x="400" y="410" font-family="'Jost', sans-serif" font-size="11" font-weight="400" text-transform="uppercase" fill="#B08D57" text-anchor="middle" letter-spacing="3.5">LUMIÈRE CAFÉ · BOUTIQUE ROASTERS</text>
+        </svg>`;
+        return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+      }
+
+      function handleImgError(img, title) {
+        img.onerror = null; // Prevent recursion
+        img.src = getFallbackSvg(title);
+      }
+    </script>
+
+    <!-- SECTION 1: Sticky Blurred Navbar -->
+    <header
+      id="siteHeader"
+      class="sticky top-0 z-40 w-full transition-all duration-300 backdrop-blur-md bg-[#FFF7F5]/90 border-b border-blush/60"
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-6">
+        <!-- Logo -->
+        <a
+          href="#top"
+          class="font-serif text-2xl lg:text-3xl font-medium tracking-wide text-plum hover:text-mauve transition-colors shrink-0"
+        >
+          Lumière Café
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav
+          class="hidden md:flex items-center gap-8 text-sm tracking-wide font-light text-plum"
+          aria-label="Main Navigation"
+        >
+          <a href="#menu" class="hover:text-gold transition-colors py-1 relative group">
+            Menu
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#story" class="hover:text-gold transition-colors py-1 relative group">
+            Our Story
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#experience" class="hover:text-gold transition-colors py-1 relative group">
+            Experience
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#gallery" class="hover:text-gold transition-colors py-1 relative group">
+            Gallery
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#visit" class="hover:text-gold transition-colors py-1 relative group">
+            Visit
+            <span
+              class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <!-- CTA & Mobile Toggle -->
+        <div class="flex items-center gap-4">
+          <button
+            type="button"
+            data-open-modal="reservation"
+            class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-2xl bg-rose text-plum font-medium text-xs tracking-wider uppercase hover:bg-rose-hover transition-colors shadow-plum-sm cursor-pointer"
+          >
+            Reserve a Table
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button
+            id="mobileMenuBtn"
+            type="button"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            class="md:hidden p-2 rounded-xl text-plum hover:bg-blush/40 transition-colors focus-visible:outline-none"
+          >
+            <svg
+              id="hamburgerIcon"
+              class="w-6 h-6 stroke-plum"
+              fill="none"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round" />
+              <line x1="3" y1="12" x2="21" y2="12" stroke-linecap="round" />
+              <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round" />
+            </svg>
+            <svg
+              id="closeIcon"
+              class="w-6 h-6 stroke-plum hidden"
+              fill="none"
+              stroke-width="1.8"
+              viewBox="0 0 24 24"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round" />
+              <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden border-t border-blush/60 bg-[#FFF7F5] px-6 py-6 space-y-4 shadow-plum"
+      >
+        <nav class="flex flex-col space-y-3 text-base text-plum font-light" aria-label="Mobile Navigation">
+          <a href="#menu" class="mobile-nav-link py-2 border-b border-blush/30 hover:text-gold transition-colors">
+            Menu
+          </a>
+          <a href="#story" class="mobile-nav-link py-2 border-b border-blush/30 hover:text-gold transition-colors">
+            Our Story
+          </a>
+          <a href="#experience" class="mobile-nav-link py-2 border-b border-blush/30 hover:text-gold transition-colors">
+            Experience
+          </a>
+          <a href="#gallery" class="mobile-nav-link py-2 border-b border-blush/30 hover:text-gold transition-colors">
+            Gallery
+          </a>
+          <a href="#visit" class="mobile-nav-link py-2 border-b border-blush/30 hover:text-gold transition-colors">
+            Visit
+          </a>
+        </nav>
+        <div class="pt-2">
+          <button
+            type="button"
+            data-open-modal="reservation"
+            class="w-full text-center py-3 rounded-2xl bg-rose text-plum font-medium text-xs tracking-wider uppercase hover:bg-rose-hover transition-colors shadow-plum-sm"
+          >
+            Reserve a Table
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- SECTION 2: Hero -->
+      <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-6">
+        <!-- Soft Faded Background Photo with Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img
+            src="images/hero.jpg"
+            alt="Warm soft morning light streaming across the serene marble coffee bar and velvet seating at Lumière Café"
+            onerror="handleImgError(this, 'Slow Mornings at Lumière')"
+            class="w-full h-full object-cover object-center filter opacity-45 transform scale-105"
+          />
+          <!-- Gentle Gradient Scrim -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-[#FFF7F5]/90 via-[#FFF7F5]/80 to-[#FFF7F5]"
+          ></div>
+        </div>
+
+        <!-- Hero Content Box -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+          <!-- Small Label -->
+          <div class="reveal-on-scroll inline-flex items-center gap-2 mb-6">
+            <span class="w-8 h-[1px] bg-gold opacity-60"></span>
+            <span class="text-xs uppercase tracking-widest text-gold font-medium">Boutique Roasters & Sanctuary</span>
+            <span class="w-8 h-[1px] bg-gold opacity-60"></span>
+          </div>
+
+          <!-- Headline -->
+          <h1
+            class="reveal-on-scroll font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.1] text-plum headline-balanced mb-6"
+          >
+            Slow mornings, <br class="hidden sm:inline" />
+            <span class="italic font-light">beautifully brewed</span>
+          </h1>
+
+          <!-- Subtext -->
+          <p
+            class="reveal-on-scroll text-mauve text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-10"
+          >
+            A calm, feminine retreat crafted for gentle pacing. Linger over floral single-origin roasts,
+            delicate almond pastries, and sunlit reading nooks tailored for quiet reflection.
+          </p>
+
+          <!-- Buttons -->
+          <div class="reveal-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <a
+              href="#menu"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-2xl border border-plum/20 text-plum font-medium text-xs tracking-widest uppercase hover:bg-blush/50 transition-colors shadow-plum-sm"
+            >
+              View Menu
+            </a>
+            <button
+              type="button"
+              data-open-modal="reservation"
+              class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-rose text-plum font-medium text-xs tracking-widest uppercase hover:bg-rose-hover transition-colors shadow-plum-sm cursor-pointer"
+            >
+              Reserve a Nook
+            </button>
+          </div>
+
+          <!-- Delicate line-art accent -->
+          <div class="reveal-on-scroll mt-16 flex items-center justify-center gap-3 text-gold/70">
+            <span class="w-12 h-[1px] bg-gold/40"></span>
+            <svg class="w-4 h-4 fill-none stroke-current" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
+            </svg>
+            <span class="w-12 h-[1px] bg-gold/40"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Our Story -->
+      <section id="story" class="py-24 lg:py-32 bg-[#FFF7F5] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <!-- Left Side: Image with Blush Frame and Floating Quote -->
+            <div class="lg:col-span-6 relative">
+              <!-- Decorative Blush Frame -->
+              <div
+                class="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-full h-full rounded-3xl bg-blush border border-blush/80 -z-0"
+              ></div>
+
+              <!-- Main Image -->
+              <div class="relative z-10 rounded-2xl overflow-hidden shadow-plum bg-white">
+                <img
+                  src="images/about.jpg"
+                  alt="Founder pouring an artisanal pour-over coffee surrounded by botanical sprigs and soft morning ceramic ware"
+                  loading="lazy"
+                  onerror="handleImgError(this, 'Our Story & Heritage')"
+                  class="w-full h-[400px] sm:h-[480px] object-cover object-center transform hover:scale-[1.02] transition-transform duration-700"
+                />
+              </div>
+
+              <!-- Floating Quote Card -->
+              <div
+                class="reveal-on-scroll absolute -bottom-6 -right-2 sm:-bottom-8 sm:right-6 z-20 max-w-[280px] sm:max-w-[320px] bg-[#FFF7F5] border border-blush p-5 sm:p-6 rounded-2xl shadow-plum"
+              >
+                <p class="font-serif italic text-base sm:text-lg text-plum leading-snug">
+                  “We built Lumière as an oasis where time slows down, conversations breathe, and every pour is an act of care.”
+                </p>
+                <div class="mt-3 flex items-center gap-2">
+                  <span class="w-4 h-[1px] bg-gold"></span>
+                  <span class="text-xs uppercase tracking-wider text-mauve font-medium">Margot &amp; Saffron, Founders</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side: Text & Stats -->
+            <div class="lg:col-span-6 lg:pl-6 space-y-6">
+              <div class="reveal-on-scroll inline-flex items-center gap-2">
+                <span class="text-xs uppercase tracking-widest text-gold font-medium">Our Story</span>
+                <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+              </div>
+
+              <h2
+                class="reveal-on-scroll font-serif text-3xl sm:text-4xl lg:text-5xl text-plum leading-tight headline-balanced"
+              >
+                A sanctuary dedicated to female craft and unhurried grace.
+              </h2>
+
+              <p class="reveal-on-scroll text-mauve text-base font-light leading-relaxed">
+                Founded by two lifelong friends in search of a quieter space to write and connect, Lumière was born out of a desire for intentional hospitality. We set out to reimagine the cafe experience away from rushed lines and sterile industrial corners.
+              </p>
+
+              <p class="reveal-on-scroll text-mauve text-base font-light leading-relaxed">
+                Every bean we grind is ethically sourced from female smallholder cooperatives in Ethiopia, Colombia, and Guatemala. Our botanical syrups are infused in-house from organic damask roses, dried lavender blossoms, and green cardamom, creating warm aromas that welcome you the second you step inside.
+              </p>
+
+              <!-- Two Stats -->
+              <div class="reveal-on-scroll pt-4 grid grid-cols-2 gap-6 sm:gap-8 border-t border-blush/80">
+                <div>
+                  <div class="font-serif text-3xl sm:text-4xl text-plum font-normal tabular-nums">100%</div>
+                  <p class="text-xs sm:text-sm text-mauve font-light mt-1">
+                    Directly sourced from women-owned &amp; operated coffee farms
+                  </p>
+                </div>
+                <div>
+                  <div class="font-serif text-3xl sm:text-4xl text-plum font-normal tabular-nums">48+</div>
+                  <p class="text-xs sm:text-sm text-mauve font-light mt-1">
+                    Curated literary evenings &amp; creative community salons hosted
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Menu -->
+      <section id="menu" class="py-24 bg-[#FFF7F5] border-t border-blush/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Section Heading -->
+          <div class="max-w-2xl mx-auto text-center mb-16">
+            <div class="reveal-on-scroll inline-flex items-center gap-2 mb-3">
+              <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-medium">Everyday Classics</span>
+              <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+            </div>
+            <h2 class="reveal-on-scroll font-serif text-3xl sm:text-4xl lg:text-5xl text-plum leading-tight">
+              Simple, Fresh Cafe Favorites
+            </h2>
+            <p class="reveal-on-scroll text-mauve text-base font-light mt-4">
+              Fresh espresso, daily brewed coffee, chilled drinks, and oven-warm pastries served with care and simple goodness.
+            </p>
+          </div>
+
+          <!-- Menu Cards Grid (Rendered from JavaScript Array) -->
+          <div id="menuCardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamically injected via JavaScript -->
+          </div>
+
+          <!-- Classic Cafe Board / Price List (Normal Cafe Staples) -->
+          <div class="reveal-on-scroll mt-16 bg-blush/20 rounded-3xl border border-blush/70 p-8 sm:p-10 shadow-plum">
+            <div class="text-center max-w-xl mx-auto mb-10">
+              <span class="text-[11px] uppercase tracking-widest text-gold font-medium">Daily Counter Board</span>
+              <h3 class="font-serif text-2xl sm:text-3xl text-plum mt-1">Full Cafe Menu</h3>
+              <p class="text-mauve text-xs sm:text-sm font-light mt-1">
+                Handcrafted at our marble espresso bar. All items made fresh to order.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+              <!-- Column 1: Espresso & Hot Coffee -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2 pb-2 border-b border-blush/80">
+                  <span class="w-2 h-2 rounded-full bg-gold"></span>
+                  <h4 class="font-serif text-xl text-plum">Espresso &amp; Hot Coffee</h4>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Espresso (Solo / Doppio)</span>
+                      <p class="text-xs text-mauve font-light">Rich single or double shot</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$2.50 / $3.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Americano</span>
+                      <p class="text-xs text-mauve font-light">Espresso diluted with hot water</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Cappuccino</span>
+                      <p class="text-xs text-mauve font-light">Espresso, steamed milk, thick foam</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.75</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Classic Caffè Latte</span>
+                      <p class="text-xs text-mauve font-light">Double espresso &amp; silky milk</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$4.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Caramel or Vanilla Latte</span>
+                      <p class="text-xs text-mauve font-light">House syrup with silky milk</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$4.50</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Fresh Brewed Drip</span>
+                      <p class="text-xs text-mauve font-light">Medium roast, bottomless refill</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.00</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 2: Cold Drinks & Teas -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2 pb-2 border-b border-blush/80">
+                  <span class="w-2 h-2 rounded-full bg-gold"></span>
+                  <h4 class="font-serif text-xl text-plum">Iced Drinks &amp; Teas</h4>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Iced Cold Brew</span>
+                      <p class="text-xs text-mauve font-light">Steeped 18 hours, served over ice</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$4.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Iced Caffè Latte</span>
+                      <p class="text-xs text-mauve font-light">Espresso with cold milk over ice</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$4.25</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Matcha Green Tea Latte</span>
+                      <p class="text-xs text-mauve font-light">Whisked Japanese green tea</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$4.50</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Chai Tea Latte</span>
+                      <p class="text-xs text-mauve font-light">Spiced black tea with warm milk</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$4.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Earl Grey / Mint Tea</span>
+                      <p class="text-xs text-mauve font-light">Pot of fine loose-leaf tea</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Fresh Squeezed Lemonade</span>
+                      <p class="text-xs text-mauve font-light">Fresh lemons &amp; subtle mint</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.50</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Column 3: Bakery & Morning Bites -->
+              <div class="space-y-4">
+                <div class="flex items-center gap-2 pb-2 border-b border-blush/80">
+                  <span class="w-2 h-2 rounded-full bg-gold"></span>
+                  <h4 class="font-serif text-xl text-plum">Bakery &amp; Morning Bites</h4>
+                </div>
+                <ul class="space-y-3 text-sm">
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Butter Croissant</span>
+                      <p class="text-xs text-mauve font-light">Flaky, golden French classic</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.00</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Pain au Chocolat</span>
+                      <p class="text-xs text-mauve font-light">Flaky pastry with dark chocolate</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.50</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Glazed Lemon Loaf</span>
+                      <p class="text-xs text-mauve font-light">Moist sponge with sweet citrus glaze</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.50</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Blueberry Crumb Muffin</span>
+                      <p class="text-xs text-mauve font-light">Baked daily with wild berries</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.25</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Avocado Sourdough Toast</span>
+                      <p class="text-xs text-mauve font-light">Crushed avocado, olive oil &amp; sea salt</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$6.50</span>
+                  </li>
+                  <li class="flex items-baseline justify-between">
+                    <div>
+                      <span class="font-medium text-plum">Warm Bagel with Cream Cheese</span>
+                      <p class="text-xs text-mauve font-light">Toasted sesame or plain bagel</p>
+                    </div>
+                    <span class="font-serif text-plum font-medium tabular-nums ml-2">$3.75</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Customizations footer strip -->
+            <div class="mt-8 pt-6 border-t border-blush/80 flex flex-wrap items-center justify-between gap-3 text-xs text-mauve font-light">
+              <span><strong>Milk choices:</strong> Whole Milk, Skim, Oat Milk (+$0.50), Almond Milk (+$0.50)</span>
+              <span><strong>Add-ons:</strong> Extra Shot (+$0.75) · Vanilla / Caramel (+$0.50) · Decaf available</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: Experience -->
+      <section id="experience" class="py-24 bg-blush/30 border-t border-blush/60">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Heading -->
+          <div class="max-w-2xl mx-auto text-center mb-16">
+            <div class="reveal-on-scroll inline-flex items-center gap-2 mb-3">
+              <span class="text-xs uppercase tracking-widest text-gold font-medium">The Sanctuary</span>
+            </div>
+            <h2 class="reveal-on-scroll font-serif text-3xl sm:text-4xl lg:text-5xl text-plum leading-tight">
+              The Lumière Experience
+            </h2>
+            <p class="reveal-on-scroll text-mauve text-base font-light mt-4">
+              Every detail is designed to foster presence, quiet inspiration, and unhurried comfort.
+            </p>
+          </div>
+
+          <!-- 3 Cards with Line Icons -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Cozy Space -->
+            <div
+              class="reveal-on-scroll bg-[#FFF7F5] rounded-2xl p-8 border border-blush shadow-plum flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
+            >
+              <div>
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blush/50 flex items-center justify-center text-gold mb-6 border border-blush"
+                >
+                  <!-- Cozy Space Line Icon (Armchair / Lounge) -->
+                  <svg class="w-7 h-7 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" stroke-linecap="round" />
+                    <rect x="3" y="10" width="18" height="7" rx="2" />
+                    <path d="M6 17v3M18 17v3M3 13H2a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h1M21 13h1a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2h-1" stroke-linecap="round" />
+                  </svg>
+                </div>
+                <h3 class="font-serif text-2xl text-plum mb-3">Cozy Space</h3>
+                <p class="text-mauve text-sm font-light leading-relaxed">
+                  Sun-drenched arched windows, natural linen cushions, acoustic felt ceilings for gentle soundscapes, and intimate reading nooks where you can sink into a book without pressure to leave.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-blush/60">
+                <button
+                  type="button"
+                  data-open-modal="reservation"
+                  class="text-xs uppercase tracking-widest text-gold hover:text-plum font-medium inline-flex items-center gap-1.5 transition-colors"
+                >
+                  Book a Nook <span>&rarr;</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Card 2: Fresh Pastries -->
+            <div
+              class="reveal-on-scroll bg-[#FFF7F5] rounded-2xl p-8 border border-blush shadow-plum flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
+            >
+              <div>
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blush/50 flex items-center justify-center text-gold mb-6 border border-blush"
+                >
+                  <!-- Fresh Pastries Line Icon (Croissant / Botanical Wheat) -->
+                  <svg class="w-7 h-7 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M12 2a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9a9 9 0 0 0-9-9z" stroke-dasharray="2 3"/>
+                    <path d="M8 14c1.5 2 6.5 2 8 0" stroke-linecap="round"/>
+                    <path d="M7 10c1-2 4-3 5-3s4 1 5 3" stroke-linecap="round"/>
+                    <path d="M12 7v10" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h3 class="font-serif text-2xl text-plum mb-3">Fresh Pastries</h3>
+                <p class="text-mauve text-sm font-light leading-relaxed">
+                  Laminated daily by our in-house pastry chef using Normandy butter, organic stone-ground flours, fresh pistachios, and garden blossoms. Fresh out of the hearth every morning at 7:30 AM.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-blush/60">
+                <a
+                  href="#menu"
+                  class="text-xs uppercase tracking-widest text-gold hover:text-plum font-medium inline-flex items-center gap-1.5 transition-colors"
+                >
+                  View Bakes <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: Women's Book Nights -->
+            <div
+              class="reveal-on-scroll bg-[#FFF7F5] rounded-2xl p-8 border border-blush shadow-plum flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300"
+            >
+              <div>
+                <div
+                  class="w-14 h-14 rounded-2xl bg-blush/50 flex items-center justify-center text-gold mb-6 border border-blush"
+                >
+                  <!-- Women's Book Nights Line Icon (Open Book & Star) -->
+                  <svg class="w-7 h-7 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke-linecap="round" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 6l1 2 2 .3-1.5 1.5.3 2.2-1.8-1-1.8 1 .3-2.2L9 8.3l2-.3z" stroke-width="1.2"/>
+                  </svg>
+                </div>
+                <h3 class="font-serif text-2xl text-plum mb-3">Women's Book Nights</h3>
+                <p class="text-mauve text-sm font-light leading-relaxed">
+                  Every other Thursday evening, our doors dim to candlelight. We host discussions celebrating women fiction writers, poets, and essayists, accompanied by botanical mocktails and warm herbal brews.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-blush/60">
+                <button
+                  type="button"
+                  data-open-modal="reservation"
+                  class="text-xs uppercase tracking-widest text-gold hover:text-plum font-medium inline-flex items-center gap-1.5 transition-colors"
+                >
+                  Join Next Salon <span>&rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: Gallery -->
+      <section id="gallery" class="py-24 bg-[#FFF7F5] border-t border-blush/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Heading -->
+          <div class="max-w-2xl mx-auto text-center mb-16">
+            <div class="reveal-on-scroll inline-flex items-center gap-2 mb-3">
+              <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-medium">Moments Captured</span>
+              <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+            </div>
+            <h2 class="reveal-on-scroll font-serif text-3xl sm:text-4xl lg:text-5xl text-plum leading-tight">
+              Life inside Lumière
+            </h2>
+            <p class="reveal-on-scroll text-mauve text-base font-light mt-4">
+              A glimpse into the quiet corners, ceramic textures, and morning rituals shared within our walls.
+            </p>
+          </div>
+
+          <!-- Soft Masonry Grid of 8 Images (Rendered from JavaScript Array) -->
+          <div id="galleryGridContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Dynamically populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: Testimonials Slider -->
+      <section class="py-24 bg-blush/20 border-t border-blush/60 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <!-- Delicate Icon Indicator -->
+          <div class="reveal-on-scroll inline-flex items-center justify-center w-12 h-12 rounded-full bg-blush/70 text-gold mb-6 border border-blush">
+            <svg class="w-6 h-6 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4c0 3-1.5 5-5 6v2zM15 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h4c0 3-1.5 5-5 6v2z" />
+            </svg>
+          </div>
+
+          <!-- Slider Container -->
+          <div
+            id="testimonialSlider"
+            class="relative min-h-[220px] sm:min-h-[190px] flex items-center justify-center"
+            aria-live="polite"
+          >
+            <div
+              id="testimonialSlide"
+              class="transition-opacity duration-700 ease-out opacity-100 max-w-3xl"
+            >
+              <blockquote
+                id="testimonialQuote"
+                class="font-serif italic text-2xl sm:text-3xl lg:text-4xl text-plum leading-relaxed font-light"
+              >
+                <!-- Quote text injected via JS -->
+              </blockquote>
+              <div class="mt-6 flex flex-col items-center justify-center">
+                <cite id="testimonialAuthor" class="not-italic font-medium text-sm text-plum tracking-wide">
+                  <!-- Author injected via JS -->
+                </cite>
+                <span id="testimonialRole" class="text-xs text-mauve font-light mt-0.5">
+                  <!-- Role injected via JS -->
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Dots Navigation -->
+          <div
+            id="sliderDots"
+            class="flex items-center justify-center gap-3 mt-8"
+            role="tablist"
+            aria-label="Testimonial slides"
+          >
+            <!-- Dots dynamically populated by JS -->
+          </div>
+
+          <!-- Previous / Next Controls -->
+          <div class="flex items-center justify-center gap-4 mt-4">
+            <button
+              id="prevSlideBtn"
+              type="button"
+              aria-label="Previous quote"
+              class="p-2 rounded-full text-mauve hover:text-plum hover:bg-blush/60 transition-colors"
+            >
+              <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button
+              id="nextSlideBtn"
+              type="button"
+              aria-label="Next quote"
+              class="p-2 rounded-full text-mauve hover:text-plum hover:bg-blush/60 transition-colors"
+            >
+              <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: Visit -->
+      <section id="visit" class="py-24 bg-[#FFF7F5] border-t border-blush/50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <!-- Heading -->
+          <div class="max-w-2xl mx-auto text-center mb-16">
+            <div class="reveal-on-scroll inline-flex items-center gap-2 mb-3">
+              <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-medium">Find Your Sanctuary</span>
+              <span class="w-6 h-[1px] bg-gold opacity-60"></span>
+            </div>
+            <h2 class="reveal-on-scroll font-serif text-3xl sm:text-4xl lg:text-5xl text-plum leading-tight">
+              Visit our boutique
+            </h2>
+            <p class="reveal-on-scroll text-mauve text-base font-light mt-4">
+              Located on a tranquil, tree-lined promenade with generous natural light and morning sun.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <!-- Left Side: Address, Opening Hours, Contact Info -->
+            <div
+              class="reveal-on-scroll lg:col-span-5 bg-blush/25 border border-blush rounded-3xl p-8 sm:p-10 shadow-plum flex flex-col justify-between"
+            >
+              <div class="space-y-8">
+                <!-- Address (Algerian Address) -->
+                <div>
+                  <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-gold font-medium mb-2">
+                    <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path d="M12 21s-8-7.5-8-12a8 8 0 1 1 16 0c0 4.5-8 12-8 12z" />
+                      <circle cx="12" cy="9" r="3" />
+                    </svg>
+                    Address
+                  </div>
+                  <p class="font-serif text-2xl text-plum">24 Rue Didouche Mourad</p>
+                  <p class="text-mauve text-sm font-light mt-1">Alger Centre, 16000 Alger, Algérie</p>
+                  <span class="inline-block mt-2 text-[11px] uppercase tracking-wider text-gold/90 font-medium">
+                    (À deux pas de la Grande Poste · Alger)
+                  </span>
+                </div>
+
+                <!-- Opening Hours -->
+                <div>
+                  <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-gold font-medium mb-2">
+                    <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    Opening Hours
+                  </div>
+                  <ul class="text-sm text-plum space-y-1.5 font-light">
+                    <li class="flex justify-between border-b border-blush/50 pb-1">
+                      <span class="text-mauve">Saturday – Thursday</span>
+                      <span class="font-normal tabular-nums">7:30 AM – 7:00 PM</span>
+                    </li>
+                    <li class="flex justify-between border-b border-blush/50 pb-1">
+                      <span class="text-mauve">Friday</span>
+                      <span class="font-normal tabular-nums">8:30 AM – 6:00 PM</span>
+                    </li>
+                    <li class="flex justify-between pt-1 text-gold font-medium">
+                      <span>Literary Salon Evenings</span>
+                      <span class="tabular-nums">Thursdays until 9:00 PM</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Contact (Email only, no phone number) -->
+                <div>
+                  <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-gold font-medium mb-2">
+                    <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Contact &amp; Inquiries
+                  </div>
+                  <p class="text-sm text-plum font-light">
+                    Email: <a href="mailto:contact@lumierecafe.dz" class="hover:text-gold transition-colors underline decoration-blush font-medium">contact@lumierecafe.dz</a>
+                  </p>
+                  <p class="text-xs text-mauve/80 font-light mt-2">
+                    For private table reservations, gatherings, and questions. We reply warmly within 24 hours.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Action button -->
+              <div class="mt-8 pt-6 border-t border-blush/80">
+                <button
+                  type="button"
+                  data-open-modal="reservation"
+                  class="w-full py-3 rounded-2xl bg-rose text-plum font-medium text-xs tracking-wider uppercase hover:bg-rose-hover transition-colors shadow-plum-sm cursor-pointer"
+                >
+                  Reserve a Table Ahead
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Side: Stylized Map Placeholder Box -->
+            <div
+              class="reveal-on-scroll lg:col-span-7 bg-[#FFF7F5] border border-blush rounded-3xl overflow-hidden shadow-plum flex flex-col"
+            >
+              <div class="relative w-full h-[320px] sm:h-[380px] bg-gradient-to-br from-blush/40 via-[#FFF7F5] to-blush/30 p-8 flex flex-col justify-between">
+                <!-- Stylized Map Grid Lines -->
+                <div class="absolute inset-0 opacity-25 pointer-events-none">
+                  <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#B08D57" stroke-width="0.8" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#gridPattern)" />
+                  </svg>
+                </div>
+
+                <!-- Map Pin Anchor Centerpiece -->
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center">
+                  <div
+                    class="w-16 h-16 rounded-full bg-[#FFF7F5] border border-blush shadow-plum flex items-center justify-center text-gold mb-3 animate-pulse"
+                  >
+                    <svg class="w-8 h-8 stroke-gold" fill="none" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path d="M12 21s-8-7.5-8-12a8 8 0 1 1 16 0c0 4.5-8 12-8 12z" />
+                      <circle cx="12" cy="9" r="3" fill="#F8DDE3" />
+                    </svg>
+                  </div>
+                  <span class="font-serif text-2xl text-plum font-medium">Lumière Café</span>
+                  <p class="text-xs uppercase tracking-widest text-gold font-medium mt-1">
+                    24 Rue Didouche Mourad · Alger Centre
+                  </p>
+                  <p class="text-xs text-mauve max-w-xs mt-2 font-light">
+                    À 3 min à pied du Métro Khelifa Boukhalfa / Grande Poste · Alger, Algérie
+                  </p>
+                </div>
+
+                <!-- Bottom badge -->
+                <div class="relative z-10 flex items-center justify-between text-xs text-mauve border-t border-blush/60 pt-3">
+                  <span>Interactive Map Preview</span>
+                  <a
+                    href="https://maps.google.com/?q=Rue+Didouche+Mourad,+Alger"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gold font-medium hover:underline inline-flex items-center gap-1"
+                  >
+                    Get Directions <span>&rarr;</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Map Notes Strip -->
+              <div class="bg-blush/20 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-mauve">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-gold"></span>
+                  <span>Accessible ground level entryway with ramp and stroller-friendly pathways</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-rose"></span>
+                  <span>Quiet courtyard seating available in spring and summer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SECTION 9: Footer -->
+    <footer class="bg-plum text-ivory py-16 lg:py-20 border-t border-plum">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-ivory/15">
+          <!-- Brand & Ethos -->
+          <div class="md:col-span-5 space-y-4">
+            <a href="#top" class="font-serif text-3xl font-medium tracking-wide text-ivory inline-block">
+              Lumière Café
+            </a>
+            <p class="text-ivory/80 text-sm font-light leading-relaxed max-w-sm">
+              An unhurried sanctuary for slow mornings, artisanal coffee, and quiet luxury. Grounded in feminine warmth and respectful community.
+            </p>
+            <!-- Social Icons (Instagram, Facebook, Pinterest) -->
+            <div class="pt-2 flex items-center gap-3">
+              <!-- Instagram -->
+              <a
+                href="#instagram"
+                aria-label="Visit Lumière Café on Instagram"
+                class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center text-ivory hover:text-rose hover:border-rose transition-colors"
+              >
+                <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="1.8" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href="#facebook"
+                aria-label="Visit Lumière Café on Facebook"
+                class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center text-ivory hover:text-rose hover:border-rose transition-colors"
+              >
+                <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+
+              <!-- Pinterest -->
+              <a
+                href="#pinterest"
+                aria-label="Visit Lumière Café on Pinterest"
+                class="w-10 h-10 rounded-full border border-ivory/20 flex items-center justify-center text-ivory hover:text-rose hover:border-rose transition-colors"
+              >
+                <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="1.8" viewBox="0 0 24 24">
+                  <line x1="12" y1="8" x2="12" y2="16" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Navigation -->
+          <div class="md:col-span-3 space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-gold font-medium">Explore</h4>
+            <ul class="space-y-2 text-sm text-ivory/80 font-light">
+              <li><a href="#menu" class="hover:text-rose transition-colors">Specialty Coffee Menu</a></li>
+              <li><a href="#story" class="hover:text-rose transition-colors">Our Ethical Sourcing</a></li>
+              <li><a href="#experience" class="hover:text-rose transition-colors">Reading Nooks &amp; Space</a></li>
+              <li><a href="#experience" class="hover:text-rose transition-colors">Women's Book Nights</a></li>
+              <li><a href="#visit" class="hover:text-rose transition-colors">Hours &amp; Location</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Signup -->
+          <div class="md:col-span-4 space-y-3">
+            <h4 class="text-xs uppercase tracking-widest text-gold font-medium">Morning Letters</h4>
+            <p class="text-xs text-ivory/80 font-light leading-relaxed">
+              Subscribe to receive poetic seasonal roast announcements, salon reading lists, and private tasting invites.
+            </p>
+            <form id="newsletterForm" class="space-y-2" novalidate>
+              <div class="flex items-center gap-2">
+                <label for="newsletterEmail" class="sr-only">Your email address</label>
+                <input
+                  type="email"
+                  id="newsletterEmail"
+                  name="newsletterEmail"
+                  placeholder="your.email@sanctuary.com"
+                  required
+                  class="w-full px-4 py-2.5 rounded-xl bg-ivory/10 border border-ivory/20 text-ivory placeholder-ivory/40 text-xs focus:bg-ivory/15 focus:outline-none focus:border-gold transition-colors"
+                />
+                <button
+                  type="submit"
+                  class="px-5 py-2.5 rounded-xl bg-rose text-plum font-medium text-xs tracking-wider uppercase hover:bg-rose-hover transition-colors shrink-0 cursor-pointer"
+                >
+                  Join
+                </button>
+              </div>
+              <p id="newsletterFeedback" class="text-xs text-gold font-light hidden" role="status"></p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/60 font-light gap-4">
+          <p>&copy; 2026 Lumière Café. All rights reserved. Crafted with quiet care.</p>
+          <div class="flex items-center gap-6">
+            <a href="#privacy" class="hover:text-ivory transition-colors">Privacy Policy</a>
+            <span>·</span>
+            <a href="#terms" class="hover:text-ivory transition-colors">Terms of Hospitality</a>
+            <span>·</span>
+            <a href="#accessibility" class="hover:text-ivory transition-colors">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- RESERVATION MODAL (Name, Date, Time, Guests) -->
+    <div
+      id="reservationModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="reservationModalTitle"
+    >
+      <!-- Backdrop -->
+      <div
+        id="modalBackdrop"
+        class="absolute inset-0 bg-[#4A2C3B]/60 backdrop-blur-sm transition-opacity"
+      ></div>
+
+      <!-- Modal Dialog Window -->
+      <div
+        id="modalWindow"
+        class="relative z-10 w-full max-w-lg bg-[#FFF7F5] rounded-3xl border border-blush shadow-modal p-6 sm:p-8 transform scale-95 transition-transform duration-300 max-h-[90vh] overflow-y-auto"
+      >
+        <!-- Close Button (X) -->
+        <button
+          id="closeModalBtn"
+          type="button"
+          aria-label="Close reservation dialog"
+          class="absolute top-5 right-5 p-2 rounded-full text-mauve hover:text-plum hover:bg-blush/60 transition-colors cursor-pointer"
+        >
+          <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="1.8" viewBox="0 0 24 24">
+            <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round" />
+            <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <!-- Form View -->
+        <div id="reservationFormWrapper">
+          <div class="mb-6">
+            <span class="text-xs uppercase tracking-widest text-gold font-medium">Boutique Reservations</span>
+            <h3 id="reservationModalTitle" class="font-serif text-3xl text-plum mt-1">
+              Reserve your quiet corner
+            </h3>
+            <p class="text-mauve text-xs sm:text-sm font-light mt-1.5">
+              Select your preferred date and seating nook. We prepare table florals and quiet amenities prior to your arrival.
+            </p>
+          </div>
+
+          <form id="reservationForm" class="space-y-4" novalidate>
+            <!-- Full Name -->
+            <div>
+              <label for="guestName" class="block text-xs uppercase tracking-wider text-plum font-medium mb-1.5">
+                Full Name <span class="text-rose">*</span>
+              </label>
+              <input
+                type="text"
+                id="guestName"
+                name="guestName"
+                placeholder="e.g. Eleanor Vance"
+                required
+                class="w-full px-4 py-3 rounded-xl bg-white border border-blush text-plum placeholder-mauve/40 text-sm focus:border-gold focus:outline-none transition-colors"
+              />
+              <p id="guestNameError" class="text-xs text-rose mt-1 hidden"></p>
+            </div>
+
+            <!-- Date & Time Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Date -->
+              <div>
+                <label for="reservationDate" class="block text-xs uppercase tracking-wider text-plum font-medium mb-1.5">
+                  Date <span class="text-rose">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="reservationDate"
+                  name="reservationDate"
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-blush text-plum text-sm focus:border-gold focus:outline-none transition-colors"
+                />
+                <p id="reservationDateError" class="text-xs text-rose mt-1 hidden"></p>
+              </div>
+
+              <!-- Time -->
+              <div>
+                <label for="reservationTime" class="block text-xs uppercase tracking-wider text-plum font-medium mb-1.5">
+                  Time Slot <span class="text-rose">*</span>
+                </label>
+                <select
+                  id="reservationTime"
+                  name="reservationTime"
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-blush text-plum text-sm focus:border-gold focus:outline-none transition-colors"
+                >
+                  <option value="">Select a time</option>
+                  <option value="8:00 AM">8:00 AM (Early Morning Calm)</option>
+                  <option value="9:30 AM">9:30 AM (Morning Roast &amp; Bakes)</option>
+                  <option value="11:00 AM">11:00 AM (Midday Tea &amp; Sun)</option>
+                  <option value="1:00 PM">1:00 PM (Afternoon Reflection)</option>
+                  <option value="3:00 PM">3:00 PM (Pour-Over Solitude)</option>
+                  <option value="5:00 PM">5:00 PM (Golden Hour Unwind)</option>
+                  <option value="7:00 PM">7:00 PM (Evening Literary Salon)</option>
+                </select>
+                <p id="reservationTimeError" class="text-xs text-rose mt-1 hidden"></p>
+              </div>
+            </div>
+
+            <!-- Number of Guests & Nook Preference Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Guests -->
+              <div>
+                <label for="guestCount" class="block text-xs uppercase tracking-wider text-plum font-medium mb-1.5">
+                  Number of Guests <span class="text-rose">*</span>
+                </label>
+                <select
+                  id="guestCount"
+                  name="guestCount"
+                  required
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-blush text-plum text-sm focus:border-gold focus:outline-none transition-colors"
+                >
+                  <option value="1">1 Guest (Solo Reading Sanctuary)</option>
+                  <option value="2" selected>2 Guests (Intimate Conversation)</option>
+                  <option value="3">3 Guests (Small Circle)</option>
+                  <option value="4">4 Guests (Cozy Table)</option>
+                  <option value="5">5 Guests (Book Gathering)</option>
+                  <option value="6">6–8 Guests (Private Archway Suite)</option>
+                </select>
+                <p id="guestCountError" class="text-xs text-rose mt-1 hidden"></p>
+              </div>
+
+              <!-- Seating Preference -->
+              <div>
+                <label for="seatingPreference" class="block text-xs uppercase tracking-wider text-plum font-medium mb-1.5">
+                  Nook Preference
+                </label>
+                <select
+                  id="seatingPreference"
+                  name="seatingPreference"
+                  class="w-full px-4 py-3 rounded-xl bg-white border border-blush text-plum text-sm focus:border-gold focus:outline-none transition-colors"
+                >
+                  <option value="Sunlit Window Banquette">Sunlit Window Banquette</option>
+                  <option value="Velvet Reading Nook">Velvet Reading Nook</option>
+                  <option value="Marble Tasting Bar">Marble Tasting Bar</option>
+                  <option value="Courtyard Garden Veranda">Courtyard Garden Veranda</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Notes -->
+            <div>
+              <label for="specialRequests" class="block text-xs uppercase tracking-wider text-plum font-medium mb-1.5">
+                Special Requests or Dietary Notes (Optional)
+              </label>
+              <textarea
+                id="specialRequests"
+                name="specialRequests"
+                rows="2"
+                placeholder="e.g. Gluten-free pastries, quiet corner for writing..."
+                class="w-full px-4 py-2.5 rounded-xl bg-white border border-blush text-plum placeholder-mauve/40 text-sm focus:border-gold focus:outline-none transition-colors resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="w-full py-3.5 rounded-2xl bg-rose text-plum font-medium text-xs tracking-widest uppercase hover:bg-rose-hover transition-colors shadow-plum-sm cursor-pointer"
+              >
+                Confirm Reservation
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Thank-You Confirmation View (Shown on Successful Submit) -->
+        <div id="reservationSuccessWrapper" class="hidden text-center py-6 space-y-5">
+          <div
+            class="w-16 h-16 rounded-full bg-blush flex items-center justify-center mx-auto text-gold border border-blush shadow-plum"
+          >
+            <svg class="w-8 h-8 stroke-current" fill="none" stroke-width="1.8" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div>
+            <span class="text-xs uppercase tracking-widest text-gold font-medium">Reservation Confirmed</span>
+            <h3 class="font-serif text-3xl text-plum mt-1">
+              Your sanctuary awaits, <span id="confirmedGuestName"></span>
+            </h3>
+            <p class="text-mauve text-sm font-light mt-2 max-w-sm mx-auto leading-relaxed">
+              We have reserved your table with warm anticipation. A confirmation token has been prepared for your arrival.
+            </p>
+          </div>
+
+          <!-- Summary Card -->
+          <div class="bg-blush/30 border border-blush rounded-2xl p-5 text-left text-xs text-plum space-y-2">
+            <div class="flex justify-between border-b border-blush/60 pb-1.5">
+              <span class="text-mauve">Date &amp; Time:</span>
+              <span id="confirmedDateTime" class="font-medium"></span>
+            </div>
+            <div class="flex justify-between border-b border-blush/60 pb-1.5">
+              <span class="text-mauve">Party Size:</span>
+              <span id="confirmedGuests" class="font-medium"></span>
+            </div>
+            <div class="flex justify-between border-b border-blush/60 pb-1.5">
+              <span class="text-mauve">Seating Area:</span>
+              <span id="confirmedSeating" class="font-medium"></span>
+            </div>
+            <div class="flex justify-between pt-1">
+              <span class="text-mauve">Booking Reference:</span>
+              <span id="confirmedToken" class="font-serif font-semibold text-gold tracking-wider"></span>
+            </div>
+          </div>
+
+          <button
+            id="doneModalBtn"
+            type="button"
+            class="w-full py-3 rounded-2xl bg-rose text-plum font-medium text-xs tracking-widest uppercase hover:bg-rose-hover transition-colors shadow-plum-sm cursor-pointer"
+          >
+            Return to Sanctuary
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN JAVASCRIPT LOGIC -->
+    <script>
+      (function () {
+        'use strict';
+
+        /* 1. DATA ARRAYS */
+        const MENU_ITEMS = [
+          {
+            name: 'Classic Caffè Latte',
+            price: '$4.00',
+            description:
+              'Freshly pulled double shot of espresso combined with silky steamed whole milk and smooth latte micro-foam.',
+            tag: 'Classic',
+            image: 'images/latte.jpg',
+          },
+          {
+            name: 'Fresh Brewed Coffee',
+            price: '$3.00',
+            description:
+              'Balanced, rich medium roast coffee brewed fresh in small batches throughout the day. Smooth, clean, and comforting.',
+            tag: 'Daily Brew',
+            image: 'images/geisha.jpg',
+          },
+          {
+            name: 'Iced Cold Brew',
+            price: '$4.00',
+            description:
+              'Slow-steeped over 18 hours for maximum smoothness, served chilled over crystal ice with your choice of milk or sweet cream.',
+            tag: 'Iced Coffee',
+            image: 'images/coldbrew.jpg',
+          },
+          {
+            name: 'Matcha Latte',
+            price: '$4.50',
+            description:
+              'Whisked Japanese green tea matcha blended with warm steamed milk and a gentle whisper of pure honey.',
+            tag: 'Tea Favorite',
+            image: 'images/matcha.jpg',
+          },
+          {
+            name: 'Butter Croissant',
+            price: '$3.00',
+            description:
+              'Flaky, golden, all-butter French croissant baked fresh in-house every morning. Delicate layers with a tender crumb.',
+            tag: 'Fresh Bakery',
+            image: 'images/brioche.jpg',
+          },
+          {
+            name: 'Lemon Cake Slice',
+            price: '$3.50',
+            description:
+              'Tender, moist bakery-style lemon loaf finished with a light sweet citrus glaze and delicate candied peel.',
+            tag: 'Sweet Pastry',
+            image: 'images/cake.jpg',
+          },
+        ];
+
+        const GALLERY_IMAGES = [
+          {
+            src: 'images/gallery-1.jpg',
+            title: 'Sunlit Window Banquette',
+            tag: 'Atmosphere',
+            alt: 'Sunlight filtering through linen curtains onto a cozy velvet reading nook',
+          },
+          {
+            src: 'images/gallery-2.jpg',
+            title: 'Fresh Heirloom Bakes',
+            tag: 'Bakery',
+            alt: 'Morning viennoiserie and flaky pistachio pastries',
+          },
+          {
+            src: 'images/gallery-3.jpg',
+            title: 'Classic Latte Craft',
+            tag: 'Espresso Bar',
+            alt: 'Barista pouring intricate swan latte art dusted with organic rose petals',
+          },
+          {
+            src: 'images/gallery-4.jpg',
+            title: 'Thursday Literary Salon',
+            tag: 'Evenings',
+            alt: 'Women gathered around warm tea and fiction literature',
+          },
+          {
+            src: 'images/gallery-5.jpg',
+            title: 'Porcelain & Botanical Table',
+            tag: 'Sanctuary',
+            alt: 'Delicate floral tea setting with vintage porcelain ware',
+          },
+          {
+            src: 'images/gallery-6.jpg',
+            title: 'Cold Brew Swirl',
+            tag: 'Cold Brew',
+            alt: 'Bourbon vanilla cream swirling into amber single-origin coffee',
+          },
+          {
+            src: 'images/gallery-7.jpg',
+            title: 'Direct Trade Micro-Lots',
+            tag: 'Ethical Sourcing',
+            alt: 'Fairly sourced specialty beans from female coffee farmers',
+          },
+          {
+            src: 'images/gallery-8.jpg',
+            title: 'Evening Candlelit Solitude',
+            tag: 'Quiet Luxury',
+            alt: 'Warm ambient candlelight reflecting against wood tables and open books',
+          },
+        ];
+
+        const TESTIMONIALS = [
+          {
+            quote:
+              '“Lumière is my cherished weekly ritual. Stepping past the soft linen drapery on Rue Didouche Mourad feels like a deep, restoring exhale. The classic latte is sheer comfort.”',
+            author: 'Elena Vance',
+            role: 'Editorial Director · Alger Centre',
+          },
+          {
+            quote:
+              '“The women’s book nights have brought me the closest friendships I have made in years. It is rare to find a sanctuary in Alger that feels this gentle, warm, and thoughtful.”',
+            author: 'Dr. Maya Lin',
+            role: 'Neuroscientist & Author · Hydra, Alger',
+          },
+          {
+            quote:
+              '“Every corner is infused with quiet grace—from the linen reading nooks to the ceramic tableware. It has redefined what a morning coffee experience should be.”',
+            author: 'Camille Laurent',
+            role: 'Architect & Interior Designer · El Biar, Alger',
+          },
+        ];
+
+        /* 2. RENDER MENU CARDS FROM JS ARRAY */
+        const menuContainer = document.getElementById('menuCardsContainer');
+        if (menuContainer) {
+          menuContainer.innerHTML = MENU_ITEMS.map(function (item) {
+            return `
+              <div class="reveal-on-scroll bg-[#FFF7F5] rounded-3xl border border-blush overflow-hidden shadow-plum flex flex-col group hover:-translate-y-1 transition-all duration-300">
+                <div class="relative h-56 sm:h-64 overflow-hidden bg-blush/20">
+                  <img
+                    src="${item.image}"
+                    alt="${item.name} served at Lumière Café"
+                    loading="lazy"
+                    onerror="handleImgError(this, '${item.name}')"
+                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div class="absolute top-4 left-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-[#FFF7F5]/90 backdrop-blur-sm text-[11px] uppercase tracking-widest text-gold font-medium border border-blush shadow-plum-sm">
+                      ${item.tag}
+                    </span>
+                  </div>
+                </div>
+                <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-baseline justify-between gap-3 mb-2">
+                      <h3 class="font-serif text-2xl text-plum group-hover:text-gold transition-colors">${item.name}</h3>
+                      <span class="font-serif text-xl font-medium text-plum tabular-nums">${item.price}</span>
+                    </div>
+                    <p class="text-mauve text-sm font-light leading-relaxed">
+                      ${item.description}
+                    </p>
+                  </div>
+                  <div class="mt-6 pt-4 border-t border-blush/60 flex items-center justify-between text-xs">
+                    <span class="text-mauve/70 font-light">Organic &amp; Made to Order</span>
+                    <button
+                      type="button"
+                      data-open-modal="reservation"
+                      class="text-xs uppercase tracking-wider text-gold hover:text-plum font-medium cursor-pointer transition-colors"
+                    >
+                      Reserve Ahead &rarr;
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        /* 3. RENDER GALLERY GRID FROM JS ARRAY */
+        const galleryContainer = document.getElementById('galleryGridContainer');
+        if (galleryContainer) {
+          galleryContainer.innerHTML = GALLERY_IMAGES.map(function (img, idx) {
+            return `
+              <div class="reveal-on-scroll group relative rounded-2xl overflow-hidden shadow-plum bg-blush/30 aspect-[4/5] cursor-pointer">
+                <img
+                  src="${img.src}"
+                  alt="${img.alt}"
+                  loading="lazy"
+                  onerror="handleImgError(this, '${img.title}')"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-plum/80 via-plum/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 text-ivory">
+                  <span class="text-[10px] uppercase tracking-widest text-gold font-medium mb-1">${img.tag}</span>
+                  <h4 class="font-serif text-lg font-light">${img.title}</h4>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        /* 4. TESTIMONIALS SLIDER (Auto-play every 6.5s + Dots + Fade) */
+        let currentSlide = 0;
+        let slideTimer = null;
+        const SLIDE_INTERVAL = 6500; // 6.5 seconds
+
+        const quoteEl = document.getElementById('testimonialQuote');
+        const authorEl = document.getElementById('testimonialAuthor');
+        const roleEl = document.getElementById('testimonialRole');
+        const dotsContainer = document.getElementById('sliderDots');
+        const slideWrapper = document.getElementById('testimonialSlide');
+
+        function renderDots() {
+          if (!dotsContainer) return;
+          dotsContainer.innerHTML = TESTIMONIALS.map(function (_, i) {
+            const isActive = i === currentSlide;
+            return `
+              <button
+                type="button"
+                role="tab"
+                aria-selected="${isActive}"
+                aria-label="Go to slide ${i + 1}"
+                data-slide-index="${i}"
+                class="w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  isActive ? 'w-8 bg-gold' : 'bg-blush hover:bg-rose'
+                }"
+              ></button>
+            `;
+          }).join('');
+
+          // Wire dot click events
+          const dotBtns = dotsContainer.querySelectorAll('button');
+          dotBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              const idx = parseInt(this.getAttribute('data-slide-index'), 10);
+              goToSlide(idx);
+              restartSlideTimer();
+            });
+          });
+        }
+
+        function updateSlideContent(idx) {
+          if (!quoteEl || !authorEl || !roleEl || !slideWrapper) return;
+          slideWrapper.classList.remove('opacity-100');
+          slideWrapper.classList.add('opacity-0');
+
+          setTimeout(function () {
+            const item = TESTIMONIALS[idx];
+            quoteEl.textContent = item.quote;
+            authorEl.textContent = item.author;
+            roleEl.textContent = item.role;
+            slideWrapper.classList.remove('opacity-0');
+            slideWrapper.classList.add('opacity-100');
+            renderDots();
+          }, 300);
+        }
+
+        function goToSlide(idx) {
+          currentSlide = (idx + TESTIMONIALS.length) % TESTIMONIALS.length;
+          updateSlideContent(currentSlide);
+        }
+
+        function startSlideTimer() {
+          if (slideTimer) clearInterval(slideTimer);
+          slideTimer = setInterval(function () {
+            goToSlide(currentSlide + 1);
+          }, SLIDE_INTERVAL);
+        }
+
+        function restartSlideTimer() {
+          startSlideTimer();
+        }
+
+        // Previous and Next buttons
+        const prevBtn = document.getElementById('prevSlideBtn');
+        const nextBtn = document.getElementById('nextSlideBtn');
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function () {
+            goToSlide(currentSlide - 1);
+            restartSlideTimer();
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function () {
+            goToSlide(currentSlide + 1);
+            restartSlideTimer();
+          });
+        }
+
+        // Initialize slider
+        updateSlideContent(0);
+        startSlideTimer();
+
+        // Pause on hover
+        const sliderSection = document.getElementById('testimonialSlider');
+        if (sliderSection) {
+          sliderSection.addEventListener('mouseenter', function () {
+            if (slideTimer) clearInterval(slideTimer);
+          });
+          sliderSection.addEventListener('mouseleave', function () {
+            startSlideTimer();
+          });
+        }
+
+        /* 5. RESERVATION MODAL CONTROLS */
+        const modal = document.getElementById('reservationModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalWindow = document.getElementById('modalWindow');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const reservationForm = document.getElementById('reservationForm');
+        const reservationFormWrapper = document.getElementById('reservationFormWrapper');
+        const reservationSuccessWrapper = document.getElementById('reservationSuccessWrapper');
+        const doneModalBtn = document.getElementById('doneModalBtn');
+
+        // Set default date to tomorrow
+        const dateInput = document.getElementById('reservationDate');
+        if (dateInput) {
+          const tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          const yyyy = tomorrow.getFullYear();
+          const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+          const dd = String(tomorrow.getDate()).padStart(2, '0');
+          dateInput.min = `${yyyy}-${mm}-${dd}`;
+          dateInput.value = `${yyyy}-${mm}-${dd}`;
+        }
+
+        function openModal() {
+          if (!modal) return;
+          modal.classList.remove('opacity-0', 'pointer-events-none');
+          modal.classList.add('opacity-100', 'pointer-events-auto');
+          if (modalWindow) {
+            modalWindow.classList.remove('scale-95');
+            modalWindow.classList.add('scale-100');
+          }
+          document.body.style.overflow = 'hidden';
+          // Focus first input
+          const firstInput = document.getElementById('guestName');
+          if (firstInput) setTimeout(() => firstInput.focus(), 100);
+        }
+
+        function closeModal() {
+          if (!modal) return;
+          modal.classList.remove('opacity-100', 'pointer-events-auto');
+          modal.classList.add('opacity-0', 'pointer-events-none');
+          if (modalWindow) {
+            modalWindow.classList.remove('scale-100');
+            modalWindow.classList.add('scale-95');
+          }
+          document.body.style.overflow = '';
+
+          // Reset to form view after exit transition
+          setTimeout(function () {
+            if (reservationFormWrapper && reservationSuccessWrapper) {
+              reservationFormWrapper.classList.remove('hidden');
+              reservationSuccessWrapper.classList.add('hidden');
+            }
+          }, 300);
+        }
+
+        // Attach open listener to all elements with data-open-modal="reservation"
+        document.querySelectorAll('[data-open-modal="reservation"]').forEach(function (el) {
+          el.addEventListener('click', function (e) {
+            e.preventDefault();
+            openModal();
+          });
+        });
+
+        if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+        if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+        if (doneModalBtn) doneModalBtn.addEventListener('click', closeModal);
+
+        // Close on Escape key
+        window.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && modal && !modal.classList.contains('pointer-events-none')) {
+            closeModal();
+          }
+        });
+
+        // Form Submit Validation & Thank You Message
+        if (reservationForm) {
+          reservationForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let isValid = true;
+
+            const nameInput = document.getElementById('guestName');
+            const nameError = document.getElementById('guestNameError');
+            if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+              nameError.textContent = 'Please provide your name (at least 2 characters).';
+              nameError.classList.remove('hidden');
+              isValid = false;
+            } else {
+              nameError.classList.add('hidden');
+            }
+
+            const resDateInput = document.getElementById('reservationDate');
+            const dateError = document.getElementById('reservationDateError');
+            if (!resDateInput.value) {
+              dateError.textContent = 'Please choose a date.';
+              dateError.classList.remove('hidden');
+              isValid = false;
+            } else {
+              dateError.classList.add('hidden');
+            }
+
+            const timeInput = document.getElementById('reservationTime');
+            const timeError = document.getElementById('reservationTimeError');
+            if (!timeInput.value) {
+              timeError.textContent = 'Please select a preferred seating time.';
+              timeError.classList.remove('hidden');
+              isValid = false;
+            } else {
+              timeError.classList.add('hidden');
+            }
+
+            if (!isValid) return;
+
+            // Extract values
+            const guestName = nameInput.value.trim();
+            const dateVal = resDateInput.value;
+            const timeVal = timeInput.value;
+            const guestCount = document.getElementById('guestCount').value;
+            const seatingPref = document.getElementById('seatingPreference').value;
+
+            // Generate clean token
+            const token = '#LUM-' + Math.floor(1000 + Math.random() * 9000);
+
+            // Populate confirmation
+            document.getElementById('confirmedGuestName').textContent = guestName;
+            document.getElementById('confirmedDateTime').textContent = `${dateVal} at ${timeVal}`;
+            document.getElementById('confirmedGuests').textContent = `${guestCount} Guest${guestCount > 1 ? 's' : ''}`;
+            document.getElementById('confirmedSeating').textContent = seatingPref;
+            document.getElementById('confirmedToken').textContent = token;
+
+            // Switch views
+            reservationFormWrapper.classList.add('hidden');
+            reservationSuccessWrapper.classList.remove('hidden');
+            reservationForm.reset();
+          });
+        }
+
+        /* 6. MOBILE HAMBURGER MENU */
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburgerIcon = document.getElementById('hamburgerIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        if (mobileBtn && mobileMenu) {
+          mobileBtn.addEventListener('click', function () {
+            const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+            mobileBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            if (hamburgerIcon && closeIcon) {
+              hamburgerIcon.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            }
+          });
+
+          // Close mobile menu on link click
+          document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+              mobileMenu.classList.add('hidden');
+              mobileBtn.setAttribute('aria-expanded', 'false');
+              if (hamburgerIcon && closeIcon) {
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+              }
+            });
+          });
+        }
+
+        /* 7. NEWSLETTER SIGNUP */
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterFeedback = document.getElementById('newsletterFeedback');
+        if (newsletterForm && newsletterFeedback) {
+          newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('newsletterEmail');
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+              newsletterFeedback.textContent = 'Please enter a valid email address.';
+              newsletterFeedback.classList.remove('hidden', 'text-gold');
+              newsletterFeedback.classList.add('text-rose');
+              return;
+            }
+
+            newsletterFeedback.textContent = 'Merci! Our quiet morning reflections will soon reach your inbox.';
+            newsletterFeedback.classList.remove('hidden', 'text-rose');
+            newsletterFeedback.classList.add('text-gold');
+            emailInput.value = '';
+          });
+        }
+
+        /* 8. INTERSECTION OBSERVER FOR GENTLE SCROLL REVEAL */
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(
+            function (entries, obs) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+          );
+
+          document.querySelectorAll('.reveal-on-scroll').forEach(function (el) {
+            observer.observe(el);
+          });
+        } else {
+          // Fallback if IntersectionObserver is not supported
+          document.querySelectorAll('.reveal-on-scroll').forEach(function (el) {
+            el.classList.add('is-visible');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

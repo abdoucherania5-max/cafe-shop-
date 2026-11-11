@@ -1,0 +1,6 @@
+{
+  "name": "Lumière Café",
+  "description": "A women-focused boutique coffee shop website with quiet luxury aesthetic, specialty brew menu, cozy reading nooks, and reservations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
